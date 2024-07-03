@@ -1,0 +1,2 @@
+D0 to D7 are connected to a 8 relay board. 2 of the relays change the polarity of the infeeds to the other relays and they there are 2 relays for each shutter to connect the shutters to the output of the polarity changing relays one shutter at a time.
+A0 is connected to a shunt resistor (5x0.1 ohm) to measure the current being used by the shutter so it can switch them off when they hit the limits.
