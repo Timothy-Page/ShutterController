@@ -86,7 +86,6 @@
   const int ShutterMaxRuntimeDown = 24000;
   const int ShutterRuntimeHalfUp = 5000;
 
-  boolean CurrentDirection;m
   int PreviousShuntValue;
 
   
