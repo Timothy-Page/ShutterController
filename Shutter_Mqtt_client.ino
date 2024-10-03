@@ -76,13 +76,17 @@
   const int ShutterSides[] = {Shutter1Side, Shutter2Side, Shutter3Side};
   const int ShutterAddress[] = {Shutter1StateAddress,Shutter2StateAddress,Shutter3StateAddress};
 
-  const int ShuntMaxDown = 30;
-  const int ShuntBoarderDown = 27;
+  const int ShuntMaxDown = 25;
+  const int ShuntBoarderDown = 24;
   const int ShuntMaxUp = 45;
   const int ShuntBoarderUp = 40;
   const int MiniTime = 3;
 
-  boolean CurrentDirection;
+  const int ShutterMaxRuntimeUp = 30000;
+  const int ShutterMaxRuntimeDown = 24000;
+  const int ShutterRuntimeHalfUp = 5000;
+
+  boolean CurrentDirection;m
   int PreviousShuntValue;
 
   
@@ -366,12 +370,12 @@ void MoveShutter(boolean SetDirection, int Shutter){
   int MaxRuntime = 0;
   if (SetDirection == true)
   {
-    MaxRuntime = 25000;
+    MaxRuntime = ShutterMaxRuntimeUp;
     //delay(25000);
   }
   else
   {
-    MaxRuntime = 23000;
+    MaxRuntime = ShutterMaxRuntimeDown;
     //delay(23000);
   }
   
